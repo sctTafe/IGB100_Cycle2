@@ -634,7 +634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &461227025
 Transform:
   m_ObjectHideFlags: 0
@@ -851,6 +851,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1998888922}
   - {fileID: 1663392186}
   - {fileID: 1609390690}
   - {fileID: 887849354}
@@ -1124,6 +1125,7 @@ Transform:
   m_Children:
   - {fileID: 1517058068}
   - {fileID: 1516584033}
+  - {fileID: 864428087}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1160,6 +1162,68 @@ Transform:
   m_Father: {fileID: 339932764}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &864428086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 864428087}
+  - component: {fileID: 864428088}
+  m_Layer: 0
+  m_Name: NavMesh Surface - Fly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &864428087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864428086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.922607, y: -19.36568, z: -9.818787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 766790322}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &864428088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864428086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 1479372276
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 2b0fa505767d59a4595549c593b6b65a, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &887849353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1254,7 @@ Transform:
   m_Children:
   - {fileID: 1547559854}
   m_Father: {fileID: 669692163}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &976068544
 GameObject:
@@ -1319,7 +1383,7 @@ Transform:
   m_Children:
   - {fileID: 1098248887}
   m_Father: {fileID: 669692163}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065175465
 GameObject:
@@ -1331,12 +1395,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1065175466}
   m_Layer: 0
-  m_Name: Mesuring Sticks
+  m_Name: TEST Mesuring Sticks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1065175466
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,7 +1715,7 @@ GameObject:
   - component: {fileID: 1516584033}
   - component: {fileID: 1516584034}
   m_Layer: 0
-  m_Name: NavMesh Surface
+  m_Name: NavMesh Surface - Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1665,7 +1729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516584032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.922607, y: -20.365685, z: -9.818787}
+  m_LocalPosition: {x: 11.922607, y: -19.36568, z: -9.818787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1700,7 +1764,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.33333334
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 9a21f3c14ef1b4c44b6150e8da6d39e1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4c3a0265c7e9b634291dffe2575a9daa, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1517058067
 GameObject:
@@ -1750,14 +1814,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050a92eb1d485d445996ccb4c9a1f50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 2732284700521041281, guid: b415eb556779e984eb0bc26980a7edd8,
-    type: 3}
+  _enemyPrefabs:
+  - {fileID: 1181156405332506838, guid: 76b6c023c18dc1e4da506e72709b4579, type: 3}
+  - {fileID: 2732284700521041281, guid: b415eb556779e984eb0bc26980a7edd8, type: 3}
   _spawnPoints:
   - {fileID: 1776729169}
   - {fileID: 39139334}
   - {fileID: 438855969}
   - {fileID: 2079918096}
-  timeBetweenWaves: 30
+  timeBetweenWaves: 5
   enemiesPerWave: 5
   isEndless: 0
 --- !u!1 &1547559853
@@ -1877,7 +1942,7 @@ Transform:
   m_Children:
   - {fileID: 6497434}
   m_Father: {fileID: 669692163}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1609390691
 MonoBehaviour:
@@ -1936,9 +2001,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 764779095}
-  - {fileID: 1998888922}
   m_Father: {fileID: 669692163}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1663392187
 MonoBehaviour:
@@ -2354,7 +2418,7 @@ GameObject:
   - component: {fileID: 1998888924}
   - component: {fileID: 1998888923}
   m_Layer: 14
-  m_Name: Visual_Capsule
+  m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2368,12 +2432,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998888921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.031999946, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1663392186}
-  m_RootOrder: 1
+  m_Father: {fileID: 669692163}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1998888923
 MeshRenderer:

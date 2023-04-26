@@ -72,7 +72,7 @@ public class CustomBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Don't count collisions with other bullets
-        if (collision.collider.CompareTag("Bullet")) return;
+        if (collision.collider.CompareTag("Water_Bullet")) return;
 
         //Count up collisions
         collisions++;

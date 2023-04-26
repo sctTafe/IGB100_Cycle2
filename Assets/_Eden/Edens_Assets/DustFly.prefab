@@ -5269,8 +5269,8 @@ GameObject:
   - component: {fileID: 8193073385967411630}
   - component: {fileID: 8518872779887871552}
   m_Layer: 0
-  m_Name: Dust Fly
-  m_TagString: Untagged
+  m_Name: DustFly
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlantingSpot
   - Bullet_Water
+  - Enemy
   layers:
   - Default
   - TransparentFX

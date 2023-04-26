@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_SpawiningManager : MonoBehaviour
 {
     [Header("Dependants")]
-    public GameObject _enemyPrefab;
+    public GameObject[] _enemyPrefabs;
     public Transform[] _spawnPoints; // array of spawn points for enemies
 
     [Header("Enemy Wave Settings")]
@@ -66,11 +66,11 @@ public class Enemy_SpawiningManager : MonoBehaviour
         for (int i = 0; i < enemiesPerWave; i++)
         {
             // select a random spawn point from the array
-            int spawnIndex = Random.Range(0, _spawnPoints.Length);
-            Transform spawnPoint = _spawnPoints[spawnIndex];
+            Transform spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
+            GameObject prefabToSpawn = _enemyPrefabs[Random.Range(0, _enemyPrefabs.Length)];
 
             // instantiate enemy prefab at the selected spawn point
-            GameObject enemy = Instantiate(_enemyPrefab, spawnPoint.position, Quaternion.identity);
+            GameObject enemy = Instantiate(prefabToSpawn, spawnPoint.position, Quaternion.identity);
             enemy.transform.parent = this.transform;
 
             // wait a short time before spawning next enemy
