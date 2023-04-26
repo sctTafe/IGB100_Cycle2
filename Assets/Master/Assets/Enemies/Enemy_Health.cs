@@ -22,11 +22,13 @@ public class Enemy_Health : MonoBehaviour, IDamageable
         {
             Die();
         }
+
+        Debug.Log("Damage Done: [" + damageValue + "]");
     }
 
     void Die()
     {
-        Destroy(transform.parent.gameObject);
+        Destroy(transform.gameObject);
     }
 
 

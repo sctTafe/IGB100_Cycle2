@@ -20,11 +20,11 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Enemy
   - Ground
   - Player
   - Player_RespawnZone
-  - 
+  - Bullet
   - 
   - 
   - 

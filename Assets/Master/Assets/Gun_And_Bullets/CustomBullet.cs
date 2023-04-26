@@ -72,7 +72,7 @@ public class CustomBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Don't count collisions with other bullets
-        if (collision.collider.CompareTag("Water_Bullet")) return;
+        if (collision.collider.CompareTag("Bullet_Water")) return;
 
         //Count up collisions
         collisions++;
@@ -80,7 +80,7 @@ public class CustomBullet : MonoBehaviour
         //Explode if bullet hits an enemy directly and explodeOnTouch is activated
         if (collision.collider.CompareTag("Enemy") && explodeOnTouch) Explode();
 
-        #region Added By Scott
+        #region IDamageable - Added By Scott
         // Collision Hit Damage
         IDamageable damageable = collision.collider.GetComponent<IDamageable>();
         if (damageable != null)

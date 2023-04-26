@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 729298079398426336}
   - component: {fileID: 266105756778727105}
   - component: {fileID: 6360858283628264650}
-  m_Layer: 0
+  - component: {fileID: 2105435828690318248}
+  m_Layer: 12
   m_Name: Enemy_DustFly
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +32,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4529796059977602320}
   - {fileID: 8344113208996223245}
   - {fileID: 6780224418876307626}
   m_Father: {fileID: 0}
@@ -93,6 +93,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+--- !u!135 &2105435828690318248
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181156405332506838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.9
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4796028151247860261
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8344113208996223245}
   - component: {fileID: 2177456495062961948}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,11 +132,11 @@ Transform:
   m_GameObject: {fileID: 4796028151247860261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8064295374765116266}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &2177456495062961948
 SphereCollider:
@@ -136,52 +149,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &6664620768385228254
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4529796059977602320}
-  - component: {fileID: 8416400250524768261}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4529796059977602320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6664620768385228254}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 8064295374765116266}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &8416400250524768261
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6664620768385228254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3435005142993623300
 PrefabInstance:
@@ -190,10 +158,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8064295374765116266}
     m_Modifications:
+    - target: {fileID: 5415490922217155975, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239201158799055208, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8150550598757309027, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8193073385967411630, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8193073385967411630, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
         type: 3}
@@ -265,10 +248,40 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8518872779726458235, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518872780056723664, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518872780908594755, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8860960331770051348, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
         type: 3}
       propertyPath: m_Name
       value: DustFly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860960331770051348, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058284920999523361, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157110351261831197, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d97b1a7cadc9344a4811b52f72fc2d, type: 3}
