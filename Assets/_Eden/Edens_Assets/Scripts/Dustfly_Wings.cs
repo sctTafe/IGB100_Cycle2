@@ -20,6 +20,6 @@ public class Dustfly_Wings : MonoBehaviour
     {
         currentAnimTime += Time.deltaTime * flapSpeed;
         leftWing.localEulerAngles = Vector3.back * ((flapCurve.Evaluate(currentAnimTime)*flapAngle*2)-flapAngle);
-        rightWing.localEulerAngles = -leftWing.eulerAngles;
+        rightWing.localEulerAngles = -leftWing.localEulerAngles;
     }
 }
