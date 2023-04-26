@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8064295374765116266}
   - component: {fileID: 729298079398426336}
   - component: {fileID: 266105756778727105}
+  - component: {fileID: 565381152965704023}
   - component: {fileID: 6360858283628264650}
   - component: {fileID: 2105435828690318248}
   m_Layer: 12
@@ -79,6 +80,20 @@ MonoBehaviour:
     m_Bits: 16384
   _drunkWalkRange: 5
   _playerSightRange: 10
+--- !u!114 &565381152965704023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181156405332506838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746b76573e9796043b13b62b3065e6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 0}
+  _atackRange: 0
 --- !u!114 &6360858283628264650
 MonoBehaviour:
   m_ObjectHideFlags: 0
