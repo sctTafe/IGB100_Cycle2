@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AINavEnemy : MonoBehaviour
+public class Enemy_Movement_AINav : MonoBehaviour
 {
     [SerializeField] private LayerMask _groundLayer, _playerLayer;    
     [SerializeField] private float _drunkWalkRange;     

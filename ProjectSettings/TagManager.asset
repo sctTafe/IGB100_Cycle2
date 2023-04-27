@@ -7,6 +7,7 @@ TagManager:
   - PlantingSpot
   - Bullet_Water
   - Enemy
+  - GolemHeart
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Player
   - Player_RespawnZone
   - Bullet
-  - 
+  - Plant
   - 
   - 
   - 

@@ -313,6 +313,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1977097390}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &292726668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292726669}
+  - component: {fileID: 292726670}
+  m_Layer: 0
+  m_Name: '[EnemyTargetingManage]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292726669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292726668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 766790322}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &292726670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292726668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd043111cc854e41b874aff3c2fb555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _plantsLayer:
+    serializedVersion: 2
+    m_Bits: 131072
+  _targetingAreaCheckSphereRadius: 40
+  _targatableRefreshInterval: 0.1
+  _player_Tag: Player
+  _golemHeart_Tag: GolemHeart
 --- !u!1 &339932763
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +396,7 @@ Transform:
   - {fileID: 2144247359}
   - {fileID: 843254471}
   - {fileID: 96389762}
+  - {fileID: 766790322}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1028,10 +1080,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 292726669}
   - {fileID: 1517058068}
   - {fileID: 1516584033}
   - {fileID: 864428087}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 339932764}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843254470
@@ -1097,7 +1150,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 766790322}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &864428088
 MonoBehaviour:
@@ -1321,7 +1374,7 @@ Transform:
   - {fileID: 976068545}
   - {fileID: 732414317}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1098248886
 PrefabInstance:
@@ -1726,6 +1779,86 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6239021558125732995, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558125732995, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558125732995, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558125732995, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558219265295, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558219265295, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558219265295, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558219265295, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558882818873, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558882818873, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558882818873, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021558882818873, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021559249987065, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021559249987065, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021559249987065, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239021559249987065, guid: fe636998fc40603439d44bbd5eaf8a21,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe636998fc40603439d44bbd5eaf8a21, type: 3}
 --- !u!114 &1378721336 stripped
@@ -1776,7 +1909,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 766790322}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1516584034
 MonoBehaviour:
@@ -1842,7 +1975,7 @@ Transform:
   - {fileID: 438855969}
   - {fileID: 2079918096}
   m_Father: {fileID: 766790322}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1517058069
 MonoBehaviour:
@@ -2604,6 +2737,11 @@ PrefabInstance:
     - target: {fileID: 1554950182102181017, guid: ceafafd0124bcc74f934bef6d75da990,
         type: 3}
       propertyPath: m_Name
+      value: GolemHeart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554950182102181017, guid: ceafafd0124bcc74f934bef6d75da990,
+        type: 3}
+      propertyPath: m_TagString
       value: GolemHeart
       objectReference: {fileID: 0}
     - target: {fileID: 1941657023502009116, guid: ceafafd0124bcc74f934bef6d75da990,

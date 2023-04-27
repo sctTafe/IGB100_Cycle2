@@ -2,20 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Health : MonoBehaviour, ITargetable
+public class Plant_Health : MonoBehaviour, ITargetable
 {
-    TargetableType _thisTargetableType;
-
+    #region ITargetable
     public TargetableType fn_GetTargetableType()
     {
-        return (_thisTargetableType);
+        return TargetableType.Plant;
     }
 
     public float? fn_GetTargetingRangeOverideValue()
     {
         return null;
     }
+    #endregion
 
+
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        
+    }
 
 
 }
