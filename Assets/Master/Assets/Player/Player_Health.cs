@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Health : MonoBehaviour
+public class Player_Health : MonoBehaviour, ITargetable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    TargetableType _thisTargetableType;
 
-    // Update is called once per frame
-    void Update()
+    public TargetableType fn_GetTargetableType()
     {
-        
+        return (_thisTargetableType);
     }
 }
