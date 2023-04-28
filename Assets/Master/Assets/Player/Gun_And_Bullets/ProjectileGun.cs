@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ProjectileGun : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class ProjectileGun : MonoBehaviour
     //bug fixing :D
     public bool allowInvoke = true;
 
+    //Ammo bar ^^
+    public Image ammoBar;
+    float lerpSpeed;
+
     private void Awake()
     {
         //make sure magazine is full
@@ -46,7 +51,15 @@ public class ProjectileGun : MonoBehaviour
         //Set ammo display, when it exists :D
         if (ammunitionDisplay != null)
             ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+
+        lerpSpeed = 3f * Time.deltaTime;
+        AmmoBarFiller();
     }
+    void AmmoBarFiller()
+    {
+        ammoBar.fillAmount = Mathf.Lerp(ammoBar.fillAmount, bulletsLeft / magazineSize, lerpSpeed);
+    }
+
     private void MyInput()
     {
         //Check if allowed to hold down button and take corresponding input

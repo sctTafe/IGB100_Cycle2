@@ -20,9 +20,9 @@ public class UI_GolemHeartHealth : MonoBehaviour
         if (health > maxHealth) health = maxHealth;
 
         lerpSpeed = 3f * Time.deltaTime;
+        
 
         HealthBarFiller();
-        ColorChanger();
     }
 
     void HealthBarFiller()
@@ -30,28 +30,26 @@ public class UI_GolemHeartHealth : MonoBehaviour
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
     }
 
-    void ColorChanger()
-    {
-        Color healthColor = Color.Lerp(Color.red, Color.green, (health / maxHealth));
-
-        healthBar.color = healthColor;
-
-    }
-
     public void Damage(float damagePoints)
     {
         if (health > 0)
             health -= damagePoints;
     }
-    public void Heal(float healingPoints)
+    
+    private float _delay = 10;
+
+    public void FixedUpdate()
     {
-        if (health < maxHealth-healingPoints)
+        if (_delay > 0)
         {
-            health += healingPoints;
+            _delay -= Time.fixedDeltaTime;
+
+            if (_delay <= 0)
+            {
+                health = health - 100;
+                _delay = 10;
+            }
         }
-        else
-        {
-            health = healingPoints;
-        }
-    }   
+    }
+
 }
