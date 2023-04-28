@@ -166,7 +166,7 @@ MonoBehaviour:
     m_Bits: 4160
   bounciness: 0
   useGravity: 1
-  damage: 10
+  damage: 20
   explosionRange: 0.3
   explosionForce: 1
   maxCollisions: 1
