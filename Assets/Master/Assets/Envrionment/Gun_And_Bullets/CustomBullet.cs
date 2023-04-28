@@ -85,7 +85,7 @@ public class CustomBullet : MonoBehaviour
         IDamageable damageable = collision.collider.GetComponent<IDamageable>();
         if (damageable != null)
         {
-            damageable.Damage(damage);
+            damageable.fn_IDamage(damage);
         }
         #endregion
     }

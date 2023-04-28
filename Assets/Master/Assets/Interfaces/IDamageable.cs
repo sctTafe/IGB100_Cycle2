@@ -7,5 +7,5 @@ public interface IDamageable
 {                                                      
     //event EventHandler OnMyEvent;       // can have events
     //int MyInt { get; set; }             // can have property, cannot have feilds 
-    void Damage(float baseDamageValue = 0);
+    void fn_IDamage(float baseDamageValue = 0);
 }

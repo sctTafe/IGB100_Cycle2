@@ -9,5 +9,5 @@ using UnityEngine;
 /// </summary>
 public interface IAttackable 
 {
-    public void Attack(float damageBaseValue);
+    public void fn_IAttack(float damageBaseValue);
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(Enemy_Targeting))]
 public class Enemy_Movement_AINav : MonoBehaviour
 {
     [SerializeField] private LayerMask _groundLayer;    
@@ -10,12 +11,15 @@ public class Enemy_Movement_AINav : MonoBehaviour
     private Transform _TargetTransfrom;  
     private bool _isWalkPointSet;
     private Vector3 _walkPoint;
-
+    private Enemy_Targeting _enemyTargeting;
 
     #region Unity Functions
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+
+        if (TryGet_Enemy_Targeting() != null)
+            _enemyTargeting._OnTargetChange += Handle_OnTargetChange;
     }
     private void Update()
     {      
@@ -24,13 +28,21 @@ public class Enemy_Movement_AINav : MonoBehaviour
         else
             DrunkWalk();                 
     }
+
+    private void OnDestroy()
+    {
+        _enemyTargeting._OnTargetChange -= Handle_OnTargetChange;
+    }
     #endregion
 
     #region Public Functions
-    public void fn_SetTargetTransfrom(Transform target) => _TargetTransfrom = target;
+    public void fn_SetTargetTransfrom(Transform targetTrans) => _TargetTransfrom = targetTrans;
     #endregion
 
+
     #region Priavte Functions
+    private void Handle_OnTargetChange(Transform targetTrans) => _TargetTransfrom = targetTrans;
+
     private void UpdateAINavDestinationWithTargetPosition() => _agent.SetDestination(_TargetTransfrom.position);
     private void DrunkWalk()
     {
@@ -56,4 +68,11 @@ public class Enemy_Movement_AINav : MonoBehaviour
     }
     #endregion
 
+    private Enemy_Targeting TryGet_Enemy_Targeting()
+    {
+        if (_enemyTargeting != null)
+            return _enemyTargeting;
+        _enemyTargeting = this.GetComponent<Enemy_Targeting>();
+        return _enemyTargeting;
+    }
 }

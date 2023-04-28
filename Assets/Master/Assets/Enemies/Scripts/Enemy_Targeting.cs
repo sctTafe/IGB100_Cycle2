@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class Enemy_Targeting : MonoBehaviour
 {
+    public Action<Transform> _OnTargetChange;
+
     public float _targetingRange = 10.0f;
     private Transform _currentTarget;
 
     private Enemy_TargetingManager _enemyTargetingManager;
-    private Enemy_Movement_AINav _enemy_Movement_AINav;
     private Transform _newTarget;
     private void Start()
     {
-        TryGet_EnemyMovementAINav();
         TryGet_EnemyTargetingManger();
     }
 
@@ -30,10 +30,10 @@ public class Enemy_Targeting : MonoBehaviour
         if (_newTarget != _currentTarget)
         {
             _currentTarget = _newTarget;
-            TryGet_EnemyMovementAINav().fn_SetTargetTransfrom(_newTarget);
+            // -- Call OnTargetChange Event --
+            _OnTargetChange(_currentTarget);
         }
     }
-
 
     private Enemy_TargetingManager TryGet_EnemyTargetingManger()
     {
@@ -41,14 +41,6 @@ public class Enemy_Targeting : MonoBehaviour
             return _enemyTargetingManager;
         _enemyTargetingManager = Enemy_TargetingManager.Instance;
         return _enemyTargetingManager;
-    }
-
-    private Enemy_Movement_AINav TryGet_EnemyMovementAINav()
-    {
-        if (_enemy_Movement_AINav != null)
-            return _enemy_Movement_AINav;
-        _enemy_Movement_AINav = this.GetComponent<Enemy_Movement_AINav>();
-        return _enemy_Movement_AINav;
     }
 
 }

@@ -14,7 +14,7 @@ public class Plant_Health : MonoBehaviour, ITargetable, IAttackable
     }
 
     #region IAttackable
-    public void Attack(float damageBaseValue)
+    public void fn_IAttack(float damageBaseValue)
     {
         if (damageBaseValue <= 0)
             return;
@@ -27,12 +27,12 @@ public class Plant_Health : MonoBehaviour, ITargetable, IAttackable
     }
     #endregion
     #region ITargetable
-    public TargetableType fn_GetTargetableType()
+    public TargetableType fn_IGetTargetableType()
     {
         return TargetableType.Plant;
     }
 
-    public float? fn_GetTargetingRangeOverideValue()
+    public float? fn_IGetTargetingRangeOverideValue()
     {
         return null;
     }

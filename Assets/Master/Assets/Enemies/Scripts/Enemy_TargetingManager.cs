@@ -124,7 +124,7 @@ public class Enemy_TargetingManager : MonoBehaviour
             ITargetable targetable = collider.GetComponent<ITargetable>();
             if (targetable != null)
             {
-                if (targetable.fn_GetTargetableType() == TargetableType.Plant)
+                if (targetable.fn_IGetTargetableType() == TargetableType.Plant)
                     _targetablePlants.Add(collider.transform);
             }
         }

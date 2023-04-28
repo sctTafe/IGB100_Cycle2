@@ -12,7 +12,7 @@ public class Enemy_Health : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
     }
-    public void Damage(float baseDamageValue)
+    public void fn_IDamage(float baseDamageValue)
     {
         if (baseDamageValue <= 0)
             return;
