@@ -10,6 +10,8 @@ using UnityEngine;
 /// </summary>
 public class Enemy_TargetingManager : MonoBehaviour
 {
+    public static Enemy_TargetingManager Instance;
+
     [Header("Setup")]
     public LayerMask _plantsLayer;
     public float _targetingAreaCheckSphereRadius = 40f; // Should be the same as the radius of the oasis, plus a little
@@ -30,6 +32,10 @@ public class Enemy_TargetingManager : MonoBehaviour
 
     private void Start()
     {
+        if (Instance == null) 
+            Instance = this;
+        else Destroy(gameObject);
+
         TryGet_targetablePlayer();
         TryGet_targetableHeart();
     }
@@ -40,7 +46,7 @@ public class Enemy_TargetingManager : MonoBehaviour
     }
 
 
-    public Transform GetCurrentTargetTransform(Transform agentsTransfrom, float targetingRange)
+    public Transform fn_GetCurrentTargetTransform(Transform agentsTransfrom, float targetingRange)
     {
         ///Targeting Priority Order: Player > Plants > Heart
         // 1) Check if player is in range, 2) check if a plant is in range, 3) if non of the above are in range go to the heart
