@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plant : MonoBehaviour
+public class Plant_Mng : MonoBehaviour
 {
     public float _totalGrowthTime;
     public int _numberOfTimeItRequiresWateringToGrow = 2;

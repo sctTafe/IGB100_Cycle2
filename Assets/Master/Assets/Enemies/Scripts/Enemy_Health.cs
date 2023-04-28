@@ -5,31 +5,30 @@ using UnityEngine;
 
 public class Enemy_Health : MonoBehaviour, IDamageable
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    public float maxHealth = 100;
+    public float currentHealth;
 
     void Start()
     {
         currentHealth = maxHealth;
     }
-    public void Damage(int damageValue)
+    public void Damage(float baseDamageValue)
     {
-        if (damageValue <= 0)
+        if (baseDamageValue <= 0)
             return;
 
-        currentHealth -= damageValue;
+        currentHealth -= baseDamageValue;
         if (currentHealth <= 0)
         {
             Die();
         }
 
-        Debug.Log("Damage Done: [" + damageValue + "]");
+        Debug.Log("Damage Done: [" + baseDamageValue + "]");
     }
 
     void Die()
     {
         Destroy(transform.gameObject);
     }
-
 
 }
