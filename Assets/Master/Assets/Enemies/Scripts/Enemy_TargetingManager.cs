@@ -38,6 +38,8 @@ public class Enemy_TargetingManager : MonoBehaviour
 
         TryGet_targetablePlayer();
         TryGet_targetableHeart();
+
+        Timer_Reset();
     }
 
     private void Update()
@@ -81,6 +83,33 @@ public class Enemy_TargetingManager : MonoBehaviour
     }
 
 
+    #region Timer
+    private void Timer_Run()
+    {
+        if (_timeTillCheck > 0f)
+
+            // Increment the timer
+            _timeTillCheck -= Time.deltaTime;
+        Timer_CheckForEnd();
+    }
+    private void Timer_CheckForEnd()
+    {
+        if (_timeTillCheck > 0f)
+            return;
+
+        _timeTillCheck = 0;
+        // - Timer End -
+        GetTargetablePlantsInArea();
+
+        Timer_Reset();
+
+
+    }
+    private void Timer_Reset()
+    {
+        _timeTillCheck = _targatableRefreshInterval;
+    }
+    #endregion
 
     private void GetTargetablePlantsInArea()
     {
@@ -101,25 +130,7 @@ public class Enemy_TargetingManager : MonoBehaviour
         }
     }
 
-    #region Timer
-    private void Timer_Run()
-    {
-        // Increment the timer
-        _timeTillCheck -= Time.deltaTime;
-        Timer_CheckForEnd();
-    }
-    private void Timer_CheckForEnd()
-    {
-        if (_timeTillCheck > 0f)
-            return;
 
-        // - Timer End -
-            GetTargetablePlantsInArea();
-
-            // Reset the timer
-            _timeTillCheck = _targatableRefreshInterval;
-    }
-    #endregion
 
     private Transform TryGet_targetablePlayer()
     {

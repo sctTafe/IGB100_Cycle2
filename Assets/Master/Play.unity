@@ -203,10 +203,10 @@ MonoBehaviour:
   _oasisCenter: {fileID: 10644152}
   _plantingSpotPrefab: {fileID: 5725670941734805066, guid: 3797101c4036c82488e9a038e4b3cd48,
     type: 3}
-  _numberOfPlantingSpots: 30
-  _oasisPlantingRadius: 10
-  _plantingSpotMinimumSeparationDistance: 2.5
-  _exclusionRadiusFromCenter: 4
+  _numberOfPlantingSpots: 35
+  _oasisPlantingRadius: 20
+  _plantingSpotMinimumSeparationDistance: 3
+  _exclusionRadiusFromCenter: 5
   _isRunOnStartUp: 1
 --- !u!1 &39139333
 GameObject:
@@ -338,7 +338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292726668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.64, y: 0, z: -19.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -361,7 +361,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 131072
   _targetingAreaCheckSphereRadius: 40
-  _targatableRefreshInterval: 0.1
+  _targatableRefreshInterval: 0.2
   _player_Tag: Player
   _golemHeart_Tag: GolemHeart
 --- !u!1 &339932763
