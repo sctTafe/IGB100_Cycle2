@@ -5,12 +5,12 @@ using UnityEngine;
 public class Plant_Health : MonoBehaviour, ITargetable, IAttackable
 {
 
-    public float maxHealth = 100;
-    public float currentHealth;
+    public float _maxHealth = 100;
+    public float _currentHealth;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        _currentHealth = _maxHealth;
     }
 
     #region IAttackable
@@ -19,8 +19,8 @@ public class Plant_Health : MonoBehaviour, ITargetable, IAttackable
         if (damageBaseValue <= 0)
             return;
 
-        currentHealth -= damageBaseValue;
-        if (currentHealth <= 0)
+        _currentHealth -= damageBaseValue;
+        if (_currentHealth <= 0)
         {
             Die();
         }

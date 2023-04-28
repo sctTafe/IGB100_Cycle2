@@ -236,8 +236,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 362465557}
+  m_Children: []
   m_Father: {fileID: 669692163}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -253,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff6289a41ae1a34989ff905996eeb09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _PlayerTransform: {fileID: 669692163}
   _YHeightThreshold: -5
   _PlayerRespawnPointTrans: {fileID: 362465557}
 --- !u!1 &39139333
@@ -450,6 +450,7 @@ Transform:
   - {fileID: 843254471}
   - {fileID: 96389762}
   - {fileID: 766790322}
+  - {fileID: 1934388411}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -476,13 +477,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362465556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.06, y: 17.02563, z: 33.09}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.06, y: 18.923632, z: 33.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 698550242}
-  m_Father: {fileID: 23288743}
+  m_Father: {fileID: 1934388411}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &408100789
@@ -1010,6 +1011,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27eb79e83e286a047ac32e9222dd8be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 50
+  _currentHealth: 0
+  _respawn: {fileID: 23288744}
 --- !u!1 &698550241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,6 +2580,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1517058068}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1934388410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934388411}
+  m_Layer: 0
+  m_Name: '- [Player Respawn Point] -'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934388411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934388410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 362465557}
+  m_Father: {fileID: 339932764}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1977097390
 PrefabInstance:
