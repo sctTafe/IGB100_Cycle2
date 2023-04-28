@@ -1,16 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Player_Health : MonoBehaviour, ITargetable, IAttackable
+public class Golem_Health : MonoBehaviour, ITargetable, IAttackable
 {
-    public UnityEvent<float> _OnPlayerHealthChange;
-    public UnityEvent _OnPlayerDeath;
+    public UnityEvent<float> _OnGolemHealthChange;
+    public UnityEvent _OnGolemDeath;
 
-    public float _maxHealth = 200;
+    public float _maxHealth = 1000;
     public float _currentHealth;
-    public Player_Respawn _respawn;
 
     private void Start()
     {
@@ -24,13 +24,13 @@ public class Player_Health : MonoBehaviour, ITargetable, IAttackable
             return;
 
         _currentHealth -= damageBaseValue;
-
+        
         float pct = _currentHealth / _maxHealth;
-        _OnPlayerHealthChange?.Invoke(pct);
+        _OnGolemHealthChange?.Invoke(pct);
 
         if (_currentHealth <= 0)
         {
-            Die();
+            EndGame();
         }
     }
     #endregion
@@ -45,10 +45,13 @@ public class Player_Health : MonoBehaviour, ITargetable, IAttackable
     }
     #endregion
 
-    void Die()
+    private void EndGame()
     {
-        _OnPlayerDeath?.Invoke();
-        _respawn.fn_MovePlayerToRespawnPoint();
-        _currentHealth = _maxHealth;
+        _OnGolemDeath?.Invoke();
     }
+
+
+
+
+
 }

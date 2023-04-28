@@ -31,7 +31,7 @@ public class Enemy_Targeting : MonoBehaviour
         {
             _currentTarget = _newTarget;
             // -- Call OnTargetChange Event --
-            _OnTargetChange(_currentTarget);
+            _OnTargetChange?.Invoke(_currentTarget);
         }
     }
 
