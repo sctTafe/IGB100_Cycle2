@@ -15,7 +15,7 @@ public class Enemy_TargetingManager : MonoBehaviour
     [Header("Setup")]
     public LayerMask _plantsLayer;
     public float _targetingAreaCheckSphereRadius = 40f; // Should be the same as the radius of the oasis, plus a little
-    public float _targatableRefreshInterval = 0.1f;
+    public float _targatableRefreshInterval = 0.05f;
     public string _player_Tag = "Player";
     public string _golemHeart_Tag = "GolemHeart";
 
@@ -64,16 +64,19 @@ public class Enemy_TargetingManager : MonoBehaviour
         float dis;
         foreach (var plantTrans in _targetablePlants)
         {
-            dis = Vector3.Distance(plantTrans.position, agentPos);
-
-            if (dis < targetingRange)
+            if (plantTrans != null) // try and get rid of the error when a plant is destroyed
             {
-                if (dis < dis_currentDis)
+                dis = Vector3.Distance(plantTrans.position, agentPos);
+
+                if (dis < targetingRange)
                 {
-                    trans_currentBest = plantTrans;
-                    dis_currentDis = dis;
+                    if (dis < dis_currentDis)
+                    {
+                        trans_currentBest = plantTrans;
+                        dis_currentDis = dis;
+                    }
                 }
-            }                  
+            }                     
         }
         if (trans_currentBest != null)
             return trans_currentBest;
