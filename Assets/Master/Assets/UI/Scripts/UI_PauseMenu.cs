@@ -12,7 +12,8 @@ namespace ScottBarley.IGB100.V1
         void Start()
         {
             _isGamePaused = false;
-            _pauseMenu.gameObject.SetActive(false);
+            if (_pauseMenu != null)
+                _pauseMenu.gameObject.SetActive(false);                       
         }
 
         public void fn_ResumeGame()

@@ -3,55 +3,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
-public class Golem_Health : MonoBehaviour, ITargetable, IAttackable
+namespace ScottBarley.IGB100.V1
 {
-    public UnityEvent<float> _OnGolemHealthChange;
-    public UnityEvent _OnGolemDeath;
-
-    public float _maxHealth = 1000;
-    public float _currentHealth;
-
-    private void Start()
+    public class Golem_Health : MonoBehaviour, ITargetable, IAttackable
     {
-        _currentHealth = _maxHealth;
-    }
+        public UnityEvent<float> _OnGolemHealthChange;
+        public UnityEvent _OnGolemDeath;
 
-    #region IAttackable
-    public void fn_IAttack(float damageBaseValue)
-    {
-        if (damageBaseValue <= 0)
-            return;
+        public float _maxHealth = 1000;
+        public float _currentHealth;
 
-        _currentHealth -= damageBaseValue;
-        
-        float pct = _currentHealth / _maxHealth;
-        _OnGolemHealthChange?.Invoke(pct);
-
-        if (_currentHealth <= 0)
+        private void Start()
         {
-            EndGame();
+            _currentHealth = _maxHealth;
+        }
+
+        #region IAttackable
+        public void fn_IAttack(float damageBaseValue)
+        {
+            if (damageBaseValue <= 0)
+                return;
+
+            _currentHealth -= damageBaseValue;
+
+            float pct = _currentHealth / _maxHealth;
+            _OnGolemHealthChange?.Invoke(pct);
+
+            if (_currentHealth <= 0)
+            {
+                EndGame();
+            }
+        }
+        #endregion
+        #region ITargetable
+        public TargetableType fn_IGetTargetableType()
+        {
+            return (TargetableType.Player);
+        }
+        public float? fn_IGetTargetingRangeOverideValue()
+        {
+            return null;
+        }
+        #endregion
+
+        private void EndGame()
+        {
+            _OnGolemDeath?.Invoke();
         }
     }
-    #endregion
-    #region ITargetable
-    public TargetableType fn_IGetTargetableType()
-    {
-        return (TargetableType.Player);
-    }
-    public float? fn_IGetTargetingRangeOverideValue()
-    {
-        return null;
-    }
-    #endregion
-
-    private void EndGame()
-    {
-        _OnGolemDeath?.Invoke();
-    }
-
-
-
-
-
 }

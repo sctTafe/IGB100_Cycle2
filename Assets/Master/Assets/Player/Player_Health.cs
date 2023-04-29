@@ -25,7 +25,8 @@ public class Player_Health : MonoBehaviour, ITargetable, IAttackable
 
         _currentHealth -= damageBaseValue;
 
-        float pct = _currentHealth / _maxHealth;
+        float pct = Mathf.Clamp01(_currentHealth / _maxHealth);
+
         _OnPlayerHealthChange?.Invoke(pct);
 
         if (_currentHealth <= 0)
@@ -51,4 +52,6 @@ public class Player_Health : MonoBehaviour, ITargetable, IAttackable
         _respawn.fn_MovePlayerToRespawnPoint();
         _currentHealth = _maxHealth;
     }
+
+
 }
