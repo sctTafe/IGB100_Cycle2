@@ -30,6 +30,12 @@ public class UI_GolemHeartHealth : MonoBehaviour
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
     }
 
+    public void fn_SetGolemHealth_Pct(float health_pct)
+    {
+        health = health_pct * maxHealth;
+    }
+
+
     public void Damage(float damagePoints)
     {
         if (health > 0)
@@ -39,6 +45,11 @@ public class UI_GolemHeartHealth : MonoBehaviour
     private float _delay = 10;
 
     public void FixedUpdate()
+    {
+       // TEST_LowerHealth();
+    }
+
+    private void TEST_LowerHealth()
     {
         if (_delay > 0)
         {
@@ -51,5 +62,6 @@ public class UI_GolemHeartHealth : MonoBehaviour
             }
         }
     }
+
 
 }

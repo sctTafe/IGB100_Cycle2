@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1353804046}
-  m_IndirectSpecularColor: {r: 0.17511052, g: 0.21907152, b: 0.3013726, a: 1}
+  m_IndirectSpecularColor: {r: 0.1751108, g: 0.219072, b: 0.30137324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6101,7 +6101,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _OnGolemHealthChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1103338333}
+        m_TargetAssemblyTypeName: UI_GolemHeartHealth, Assembly-CSharp
+        m_MethodName: fn_SetGolemHealth_Pct
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   _OnGolemDeath:
     m_PersistentCalls:
       m_Calls: []
