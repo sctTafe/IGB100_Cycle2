@@ -37,6 +37,12 @@ public class ProjectileGun : MonoBehaviour
     public Image ammoBar;
     float lerpSpeed;
 
+    //Reloading In water
+    public Transform waterCheck;
+    public float waterDistance = 0.4f;
+    public LayerMask waterMask;
+    bool isInWater;
+
     private void Awake()
     {
         //make sure magazine is full
@@ -47,6 +53,13 @@ public class ProjectileGun : MonoBehaviour
     private void Update()
     {
         MyInput();
+
+        isInWater = Physics.CheckSphere(waterCheck.position, waterDistance, waterMask);
+
+        if (isInWater)
+        {
+            bulletsLeft = magazineSize;
+        }
 
         //Set ammo display, when it exists :D
         if (ammunitionDisplay != null)
@@ -67,9 +80,9 @@ public class ProjectileGun : MonoBehaviour
         else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
         //Reloading 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
+       // if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
         //Reload automatically when trying to shoot without ammo
-        if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
+       // if (&& readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
 
         //Shooting
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
@@ -141,15 +154,15 @@ public class ProjectileGun : MonoBehaviour
         allowInvoke = true;
     }
 
-    private void Reload()
-    {
-        reloading = true;
-        Invoke("ReloadFinished", reloadTime); //Invoke ReloadFinished function with your reloadTime as delay
-    }
-    private void ReloadFinished()
-    {
+    //private void Reload()
+    //{
+        //reloading = true;
+        //Invoke("ReloadFinished", reloadTime); //Invoke ReloadFinished function with your reloadTime as delay
+    //}
+    //private void ReloadFinished()
+    //{
         //Fill magazine
-        bulletsLeft = magazineSize;
-        reloading = false;
-    }
+        //bulletsLeft = magazineSize;
+        //reloading = false;
+    //}
 }
