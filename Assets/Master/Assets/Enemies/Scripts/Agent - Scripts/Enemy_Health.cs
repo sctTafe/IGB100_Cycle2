@@ -2,23 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy_Health : MonoBehaviour, IDamageable
 {
-    public float maxHealth = 100;
-    public float currentHealth;
+    public UnityEvent _onTakeDamage;
+    public UnityEvent _onDeath;
+
+    public float _maxHealth = 100;
+    public float _currentHealth;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        _currentHealth = _maxHealth;
     }
     public void fn_IDamage(float baseDamageValue)
     {
         if (baseDamageValue <= 0)
             return;
 
-        currentHealth -= baseDamageValue;
-        if (currentHealth <= 0)
+        _currentHealth -= baseDamageValue;
+        _onTakeDamage?.Invoke();
+
+        if (_currentHealth <= 0)
         {
             Die();
         }
@@ -29,6 +35,7 @@ public class Enemy_Health : MonoBehaviour, IDamageable
     void Die()
     {
         Destroy(transform.gameObject);
+        _onDeath?.Invoke();
     }
 
 }
