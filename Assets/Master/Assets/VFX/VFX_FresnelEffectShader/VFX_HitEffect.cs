@@ -13,8 +13,8 @@ public class VFX_HitEffect : MonoBehaviour
     private float _parameterValue = 0.5f;
     private bool _isEffectOn;
     private int _isEffectOn_int;
-    
 
+    private float _timeRemaining;
 
     private void Awake()
     {
@@ -70,9 +70,15 @@ public class VFX_HitEffect : MonoBehaviour
         _mR.SetPropertyBlock(_mPB);
     }
 
-    public void Tweenable()
+    public void Tdoe()
     {
+        Vector3 test = new Vector3(_parameterValue, 0, 0);
+        //test.DOMove()
 
+
+        //_parameterValue.DOMove
+
+        //DOTween.To(()=> _parameterValue, x=> _parameterValue)
     }
 
     void SetParamaterFloatValue(float value)

@@ -70,7 +70,7 @@ public class ProjectileGun : MonoBehaviour
     }
     void AmmoBarFiller()
     {
-        ammoBar.fillAmount = Mathf.Lerp(ammoBar.fillAmount, bulletsLeft / magazineSize, lerpSpeed);
+        ammoBar.fillAmount = Mathf.Lerp(ammoBar.fillAmount, ((bulletsLeft * 1f) / (magazineSize * 1f)), lerpSpeed);
     }
 
     private void MyInput()
