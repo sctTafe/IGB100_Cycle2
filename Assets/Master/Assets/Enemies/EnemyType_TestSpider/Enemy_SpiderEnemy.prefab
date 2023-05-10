@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5687188148775305925}
   m_Layer: 12
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,8 +538,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef0f09db6521fb4b8c392ff369e709a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  currentHealth: 0
+  _onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  _maxHealth: 100
+  _currentHealth: 0
 --- !u!136 &6513684123117160406
 CapsuleCollider:
   m_ObjectHideFlags: 0
