@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class VFX_HitEffect : MonoBehaviour
 {
+
+    public float _tweenDuration;
     public MeshRenderer _mR;
     public Material _material;
     public MaterialPropertyBlock _mPB;
@@ -19,7 +21,12 @@ public class VFX_HitEffect : MonoBehaviour
     private void Awake()
     {
         _mPB = new MaterialPropertyBlock();
-        _mR = GetComponent<MeshRenderer>();
+        Material[] mats = GetComponent<MeshRenderer>().materials;
+        foreach (var mat in mats)
+        {
+            if (mat.HasProperty(_parameterName_EffectPct))
+                _material = mat;
+        }
     }
     void Start()
     {
