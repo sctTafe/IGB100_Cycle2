@@ -7,10 +7,18 @@ namespace ScottBarley.IGB100.V1
     {
         [SerializeField] float _damage;
         [SerializeField] float _projectileLifeTime;
+        private float _lifeTimeLeft;
 
         private void Start()
         {
-            Destroy(this, _projectileLifeTime);
+            _lifeTimeLeft = _projectileLifeTime;
+        }
+        private void Update()
+        {
+            _lifeTimeLeft -= Time.deltaTime;
+            if (_lifeTimeLeft <= 0)
+                DestroyThisProjectile();
+
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -18,10 +26,14 @@ namespace ScottBarley.IGB100.V1
             IDamageable damageable = collision.collider.GetComponent<IDamageable>();
             if (damageable != null)
             {
-                damageable.fn_IDamage(_damage);
-                Destroy(this);
+                damageable.fn_IDamage(_damage);            
             }
+            DestroyThisProjectile();
+        }
 
+        private void DestroyThisProjectile()
+        {
+            Destroy(this.gameObject);
         }
 
     }

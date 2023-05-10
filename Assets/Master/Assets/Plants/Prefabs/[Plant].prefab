@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1064735887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064735888}
+  m_Layer: 17
+  m_Name: Point_ShootFromPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064735888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064735887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.044, y: 2.855, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4187983465655664581}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &379268541763296313
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +470,8 @@ GameObject:
   - component: {fileID: 1853154852455746870}
   - component: {fileID: 4167259184847379046}
   - component: {fileID: 3827289127194951395}
+  - component: {fileID: 1167397431}
+  - component: {fileID: 1167397429}
   m_Layer: 17
   m_Name: '[Plant]'
   m_TagString: Untagged
@@ -459,6 +492,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8039436841079399451}
+  - {fileID: 1064735888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -489,6 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec418b8680126a742b4db25d1464a9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _currentHealth: 0
 --- !u!54 &4167259184847379046
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -518,6 +554,40 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25
   m_Center: {x: 0, y: 0.33, z: 0}
+--- !u!135 &1167397431
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017667361459225749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 2.61, z: 0}
+--- !u!114 &1167397429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017667361459225749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5497a455e3acce4e82be20a56597c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetType_tag: Enemy
+  _projectilePrefab: {fileID: 6146950571086335569, guid: 0a6614b78421247458ec8a4dd907dab0,
+    type: 3}
+  _targetIsInRange_Distance: 20
+  _isLineOfSightRequiredToFire: 1
+  _fireRate_waitBetweenShots: 1
+  _point_ShootFromPoint_transform: {fileID: 1064735888}
+  _projectileSpread: 0.5
+  _projectileLaunchForce: 10
 --- !u!1 &6496342724311324088
 GameObject:
   m_ObjectHideFlags: 0
