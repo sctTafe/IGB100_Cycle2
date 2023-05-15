@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1353804046}
-  m_IndirectSpecularColor: {r: 0.5361794, g: 0.35538545, b: 0.16218692, a: 1}
+  m_IndirectSpecularColor: {r: 0.5361789, g: 0.35538498, b: 0.16218658, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -550,7 +550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391704330}
   m_LocalRotation: {x: -0, y: -0.24122168, z: -0, w: 0.9704701}
-  m_LocalPosition: {x: 12.88, y: -0.55, z: -54.49}
+  m_LocalPosition: {x: 12.88, y: -0.5, z: -54.49}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -869,7 +869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436684884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.2, y: -0.25, z: -21.5}
+  m_LocalPosition: {x: -40.2, y: -0.6, z: -21.5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1277,7 +1277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593400063}
   m_LocalRotation: {x: -0, y: 0.18906265, z: -0, w: 0.98196507}
-  m_LocalPosition: {x: 11.72, y: -0.5, z: 17.96}
+  m_LocalPosition: {x: 11.72, y: -0.6, z: 17.96}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3120,7 +3120,7 @@ MonoBehaviour:
   spread: 0.01
   reloadTime: 1.5
   timeBetweenShots: 0.1
-  magazineSize: 50
+  magazineSize: 75
   bulletsPerTap: 1
   allowButtonHold: 1
   fpsCam: {fileID: 554371769}
@@ -3182,8 +3182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 669692162}
   speed: 6
-  gravity: -9.81
-  jump: 1
+  gravity: -19.62
+  jump: 3
   groundCheck: {fileID: 764779095}
   groundDistance: 0.4
   groundMask:

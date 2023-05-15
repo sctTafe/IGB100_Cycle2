@@ -45,8 +45,8 @@ public class ProjectileGun : MonoBehaviour
 
     private void Awake()
     {
-        //make sure magazine is full
-        bulletsLeft = magazineSize;
+        //make sure magazine is empty
+        bulletsLeft = 0;
         readyToShoot = true;
     }
 
