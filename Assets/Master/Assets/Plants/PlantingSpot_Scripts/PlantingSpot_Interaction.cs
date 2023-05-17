@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// Dose: 
@@ -19,6 +20,7 @@ public class PlantingSpot_Interaction : MonoBehaviour
     GameObject _currentPlantingSpot;
     public int seedcount = 0;
     int currentseed = 0;
+    public TextMeshProUGUI seedDisplay;
 
 
     private void Update()
@@ -28,6 +30,8 @@ public class PlantingSpot_Interaction : MonoBehaviour
             currentseed++;
             seedcount = 0;
         }
+        if (seedDisplay != null)
+            seedDisplay.SetText("Seed Amount: " + currentseed);
         Handle_PlayerInput();
         
     }
