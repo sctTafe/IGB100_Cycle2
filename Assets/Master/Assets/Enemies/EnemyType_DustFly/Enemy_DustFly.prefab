@@ -271,6 +271,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 8518872780056723501, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.955
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518872780056723501, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518872780056723501, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518872780056723501, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8518872780056723664, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
         type: 3}
       propertyPath: m_Layer
