@@ -12,6 +12,8 @@ public class Enemy_Health : MonoBehaviour, IDamageable
     public float _maxHealth = 100;
     public float _currentHealth;
 
+    public GameObject DropLoot;
+
     void Start()
     {
         _currentHealth = _maxHealth;
@@ -32,8 +34,16 @@ public class Enemy_Health : MonoBehaviour, IDamageable
         Debug.Log("Damage Done: [" + baseDamageValue + "]");
     }
 
+    public void DropSeed()
+    {
+        Vector3 position = transform.position;
+        GameObject Loot = Instantiate(DropLoot, position, Quaternion.identity);
+
+    }
+
     void Die()
     {
+        DropSeed();
         Destroy(transform.gameObject);
         _onDeath?.Invoke();
     }

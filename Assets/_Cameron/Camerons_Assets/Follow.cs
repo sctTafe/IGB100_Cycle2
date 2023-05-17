@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public Transform Target;
+    public string _player_Tag = "Player";
+    private Transform _targetablePlayer;
 
     public float lerpSpeed;
     bool _isFollowing = true;
@@ -12,7 +13,7 @@ public class Follow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _targetablePlayer = GameObject.FindGameObjectWithTag(_player_Tag).transform;
     }
 
     public void StartFollowing()
@@ -26,7 +27,7 @@ public class Follow : MonoBehaviour
     {
         if (_isFollowing)
         {
-            transform.position = Vector3.Lerp(transform.position, Target.position, lerpSpeed);
+            transform.position = Vector3.Lerp(transform.position, _targetablePlayer.position, lerpSpeed);
         }
     }
 }

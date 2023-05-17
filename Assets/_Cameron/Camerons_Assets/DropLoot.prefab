@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99888122445a6db4d96db0e19f940b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlantingSpot_Interaction: {fileID: 1157901038355358272, guid: ef5638c3677f44a43a320aef6bf15a04,
+    type: 3}
 --- !u!1 &3750476099103154918
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +123,7 @@ GameObject:
   - component: {fileID: 4848024586864904422}
   - component: {fileID: 6114423686135129693}
   m_Layer: 0
-  m_Name: Drop Loot
+  m_Name: DropLoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,4 +157,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03f0a7e5813f8446bc8184a89ae7aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
+  _player_Tag: Player
+  lerpSpeed: 0.01

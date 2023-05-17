@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeedStore : MonoBehaviour
 {
     static SeedStore Instance;
-    public int CurrentSeed;
+    public int CurrentSeed = 0;
 
     public void SeedCollect()
     {

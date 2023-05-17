@@ -499,6 +499,8 @@ MonoBehaviour:
       m_Calls: []
   _maxHealth: 100
   _currentHealth: 0
+  DropLoot: {fileID: 3750476099103154918, guid: 50013e1a158cec342aff37e5563d7f5e,
+    type: 3}
 --- !u!136 &6513684123117160406
 CapsuleCollider:
   m_ObjectHideFlags: 0

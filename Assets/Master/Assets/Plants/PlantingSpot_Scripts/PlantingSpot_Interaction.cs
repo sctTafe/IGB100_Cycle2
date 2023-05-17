@@ -17,12 +17,19 @@ public class PlantingSpot_Interaction : MonoBehaviour
 {
     bool _isInteractingWithASpot = false;
     GameObject _currentPlantingSpot;
-    int seedcount;
+    public int seedcount = 0;
+    int currentseed = 0;
 
 
     private void Update()
     {
+        if (seedcount == 351)
+        {
+            currentseed++;
+            seedcount = 0;
+        }
         Handle_PlayerInput();
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -53,10 +60,10 @@ public class PlantingSpot_Interaction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (seedcount > 0)
+            if (currentseed > 0)
             {
                 TryPlantPlant();
-                seedcount--;
+                currentseed--;
             }        
         }
     }
