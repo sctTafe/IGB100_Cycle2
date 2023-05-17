@@ -11,7 +11,7 @@ public class SpiderProceduralAnimation : MonoBehaviour
     public float stepHeight = 0.1f;
     public bool bodyOrientation = true;
 
-    private float raycastRange = 2f;
+    private float raycastRange = 2.5f;
     private Vector3[] defaultLegPositions;
     private Vector3[] lastLegPositions;
     private Vector3 lastBodyUp;

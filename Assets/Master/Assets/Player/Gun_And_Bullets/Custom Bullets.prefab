@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5590800944165732975}
   - component: {fileID: 694785772417766186}
   - component: {fileID: 2369115258848555409}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Custom Bullets
   m_TagString: Bullet_Water
   m_Icon: {fileID: 0}

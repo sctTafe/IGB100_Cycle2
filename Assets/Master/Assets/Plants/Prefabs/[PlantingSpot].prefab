@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754326157327722031}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 89006600793996437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7982207691650939708}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7982207691650939708}
   - component: {fileID: 3156664481556103556}
   - component: {fileID: 1264942656481032534}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: dirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3963434945716089506}
   - component: {fileID: 8541056387256437848}
   - component: {fileID: 1458647263486462572}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 5568166175641262663}
   - component: {fileID: 358293098700980283}
   - component: {fileID: 5531881362125971408}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: note
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18bcfe115842bbc4f83ed9c5e52ad77e, type: 2}
+  - {fileID: 2100000, guid: 7d170faae73f70a4988a5648d95700b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -295,7 +295,8 @@ GameObject:
   - component: {fileID: 5725670941734805070}
   - component: {fileID: 5725670941734805064}
   - component: {fileID: 5725670941734805069}
-  m_Layer: 0
+  - component: {fileID: -2219202901834474493}
+  m_Layer: 17
   m_Name: '[PlantingSpot]'
   m_TagString: PlantingSpot
   m_Icon: {fileID: 0}
@@ -337,8 +338,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!114 &5725670941734805069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,3 +357,19 @@ MonoBehaviour:
     type: 3}
   _materialNormal: {fileID: 2100000, guid: 2beef55a3f13fcc4f8f98fba319ee2e2, type: 2}
   _materialSelected: {fileID: 2100000, guid: 2a1df37aa24013b488a6f971eb91401f, type: 2}
+--- !u!54 &-2219202901834474493
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725670941734805066}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
