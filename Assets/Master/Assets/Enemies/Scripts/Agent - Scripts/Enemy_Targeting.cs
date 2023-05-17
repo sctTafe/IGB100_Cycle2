@@ -25,7 +25,7 @@ public class Enemy_Targeting : MonoBehaviour
     private void UpdateTargeting()
     {
 
-        _newTarget = TryGet_EnemyTargetingManger().fn_GetCurrentTargetTransform(this.transform, _targetingRange);
+        _newTarget = TryGet_EnemyTargetingManger()?.fn_GetCurrentTargetTransform(this.transform, _targetingRange);
 
         if (_newTarget != _currentTarget)
         {

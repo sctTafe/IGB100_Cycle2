@@ -15,7 +15,7 @@ namespace ScottBarley.IGB100.V1
 
         private void Start()
         {
-            _currentHealth = _maxHealth;
+            fn_SetFullHealth();
         }
 
         #region IAttackable
@@ -38,7 +38,7 @@ namespace ScottBarley.IGB100.V1
         #region ITargetable
         public TargetableType fn_IGetTargetableType()
         {
-            return (TargetableType.Player);
+            return (TargetableType.GolemHeart);
         }
         public float? fn_IGetTargetingRangeOverideValue()
         {
@@ -49,6 +49,11 @@ namespace ScottBarley.IGB100.V1
         private void EndGame()
         {
             _OnGolemDeath?.Invoke();
+        }
+
+        public void fn_SetFullHealth()
+        {
+            _currentHealth = _maxHealth;
         }
     }
 }

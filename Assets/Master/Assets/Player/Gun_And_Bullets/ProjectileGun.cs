@@ -57,9 +57,7 @@ public class ProjectileGun : MonoBehaviour
         isInWater = Physics.CheckSphere(waterCheck.position, waterDistance, waterMask);
 
         if (isInWater)
-        {
-            bulletsLeft = magazineSize;
-        }
+            fn_SetAmmoFull();      
 
         //Set ammo display, when it exists :D
         if (ammunitionDisplay != null)
@@ -165,4 +163,9 @@ public class ProjectileGun : MonoBehaviour
         //bulletsLeft = magazineSize;
         //reloading = false;
     //}
+
+    public void fn_SetAmmoFull()
+    {
+        bulletsLeft = magazineSize;
+    }
 }

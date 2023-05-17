@@ -14,7 +14,7 @@ public class Player_Health : MonoBehaviour, ITargetable, IAttackable
 
     private void Start()
     {
-        _currentHealth = _maxHealth;
+        fn_SetHealthToFull();
     }
 
     #region IAttackable
@@ -54,8 +54,13 @@ public class Player_Health : MonoBehaviour, ITargetable, IAttackable
 
     private void OnPlayerHealthChangeInvoke()
     {
+        // calculate % 
         float pct = Mathf.Clamp01(_currentHealth / _maxHealth);
-
         _OnPlayerHealthChange?.Invoke(pct);
+    }
+
+    public void fn_SetHealthToFull()
+    {
+        _currentHealth = _maxHealth;
     }
 }

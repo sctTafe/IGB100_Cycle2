@@ -18,8 +18,9 @@ public class PlantingSpot_Interaction : MonoBehaviour
 {
     bool _isInteractingWithASpot = false;
     GameObject _currentPlantingSpot;
-    public int seedcount = 0;
-    int currentseed = 0;
+    
+    public int seedcount = 5;
+    int currentseed = 5;
     public TextMeshProUGUI seedDisplay;
 
 
@@ -30,6 +31,7 @@ public class PlantingSpot_Interaction : MonoBehaviour
             currentseed++;
             seedcount = 0;
         }
+
         if (seedDisplay != null)
             seedDisplay.SetText("Seed Amount: " + currentseed);
         Handle_PlayerInput();
@@ -77,6 +79,10 @@ public class PlantingSpot_Interaction : MonoBehaviour
         if (_isInteractingWithASpot == false) return;
         if (_currentPlantingSpot == null) return;
         _currentPlantingSpot.GetComponent<PlantingSpot>().fn_TryPlantPlant();
+    }
 
+    public void fn_SetSeedsToMax()
+    {
+        currentseed = 999;
     }
 }
