@@ -14,14 +14,13 @@ using UnityEngine;
 /// </summary>
 public class PlantingSpot : MonoBehaviour
 {
-    public GameObject _PlantPrefab;
-    
-    public Material materialNormal;
-    public Material materialSelected;
+    [SerializeField] private GameObject _plantSpot_DirtVisuals;
+    [SerializeField] private GameObject _PlantPrefab;
+    [SerializeField] private Material _materialNormal;
+    [SerializeField] private Material _materialSelected;
 
-    private Renderer targetRenderer;
+    private Renderer _targetRenderer;
 
-    
     public bool _isPlanted { get; private set; } = false;
     private bool _isUsingMaterialNormal = true;
   
@@ -37,12 +36,12 @@ public class PlantingSpot : MonoBehaviour
     {
         if (isTrue)
         {
-            targetRenderer.material = materialSelected;
+            _targetRenderer.material = _materialSelected;
             _isUsingMaterialNormal = false;
         }
         else
         {
-            targetRenderer.material = materialNormal;
+            _targetRenderer.material = _materialNormal;
             _isUsingMaterialNormal = true;
         }
 
@@ -63,12 +62,12 @@ public class PlantingSpot : MonoBehaviour
     {
         /// NOTE: the is a better way of doing this by just attaching a second material with emission and turning that on an off, but for now this was easier
         // If no target renderer is specified, use the renderer on this object
-        if (targetRenderer == null)
+        if (_targetRenderer == null)
         {
-            targetRenderer = GetComponent<Renderer>();
+            _targetRenderer = _plantSpot_DirtVisuals.GetComponent<Renderer>();
         }
         // Assign material A to the renderer initially
-        targetRenderer.material = materialNormal;
+        _targetRenderer.material = _materialNormal;
     }
     #endregion
 }

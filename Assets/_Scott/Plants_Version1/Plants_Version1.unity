@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273482743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 1, z: 0}
+  m_LocalPosition: {x: 5.11, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -456,8 +456,8 @@ Transform:
   m_GameObject: {fileID: 1628751760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -481,7 +481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1809228734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,10 +494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39bcf10f2ed4356449cc19b0a9bc5d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _plantSpot_DirtVisuals: {fileID: 0}
   _PlantPrefab: {fileID: 6017667361459225749, guid: 9b6b30712a0a9a7428b6efda1b024a1a,
     type: 3}
-  materialNormal: {fileID: 2100000, guid: 2beef55a3f13fcc4f8f98fba319ee2e2, type: 2}
-  materialSelected: {fileID: 2100000, guid: 2a1df37aa24013b488a6f971eb91401f, type: 2}
+  _materialNormal: {fileID: 0}
+  _materialSelected: {fileID: 0}
 --- !u!135 &1809228735
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -569,7 +570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809228733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.61, y: -0.08, z: -1}
+  m_LocalPosition: {x: -1.61, y: -0.08, z: -4.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -595,7 +596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1870698570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,10 +609,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39bcf10f2ed4356449cc19b0a9bc5d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _plantSpot_DirtVisuals: {fileID: 0}
   _PlantPrefab: {fileID: 6017667361459225749, guid: 9b6b30712a0a9a7428b6efda1b024a1a,
     type: 3}
-  materialNormal: {fileID: 2100000, guid: 2beef55a3f13fcc4f8f98fba319ee2e2, type: 2}
-  materialSelected: {fileID: 2100000, guid: 2a1df37aa24013b488a6f971eb91401f, type: 2}
+  _materialNormal: {fileID: 0}
+  _materialSelected: {fileID: 0}
 --- !u!135 &1870698571
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -683,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870698569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.13, y: -0.08, z: 0.71}
+  m_LocalPosition: {x: -3.13, y: -0.08, z: -2.4899998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -830,7 +832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1896907736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,10 +845,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39bcf10f2ed4356449cc19b0a9bc5d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _plantSpot_DirtVisuals: {fileID: 0}
   _PlantPrefab: {fileID: 6017667361459225749, guid: 9b6b30712a0a9a7428b6efda1b024a1a,
     type: 3}
-  materialNormal: {fileID: 2100000, guid: 2beef55a3f13fcc4f8f98fba319ee2e2, type: 2}
-  materialSelected: {fileID: 2100000, guid: 2a1df37aa24013b488a6f971eb91401f, type: 2}
+  _materialNormal: {fileID: 0}
+  _materialSelected: {fileID: 0}
 --- !u!135 &1896907737
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -918,7 +921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896907735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.08, z: -1.48}
+  m_LocalPosition: {x: -0.03, y: -0.08, z: -4.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
