@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1353804046}
-  m_IndirectSpecularColor: {r: 0.5361794, g: 0.35538545, b: 0.16218692, a: 1}
+  m_IndirectSpecularColor: {r: 0.5361789, g: 0.35538498, b: 0.16218658, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2921,6 +2921,23 @@ MonoBehaviour:
   timeBetweenWaves: 20
   enemiesPerWave: 5
   isEndless: 0
+  timeEnd: 360
+  _WinEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2957633214028344271, guid: 5c9658764f345e242aef20ab464986ab,
+          type: 3}
+        m_TargetAssemblyTypeName: ScottBarley.IGB100.V1.UI_SceneSwitch, Assembly-CSharp
+        m_MethodName: fn_ChangeToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: WinLose
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1547559853
 GameObject:
   m_ObjectHideFlags: 0

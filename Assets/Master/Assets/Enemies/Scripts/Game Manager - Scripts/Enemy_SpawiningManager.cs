@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy_SpawiningManager : MonoBehaviour
 {
@@ -20,15 +21,23 @@ public class Enemy_SpawiningManager : MonoBehaviour
     private Coroutine _WasveSpawningCoroutine;
     private int waveCount = 0; // current wave count
 
+    // Time Based End
+    public float timeEnd = 360f;
+    private float _timeTillEnd;
+    private bool _isEndTimerActive;
+    public UnityEvent _WinEnd;
+
 
     void Start()
     {
         WaveTimer_Reset();
+        EndTimer_Reset();
     }
 
     void Update()
     {
         WaveTimer_Update();
+        EndTimer_Update();
     }
 
     private void WaveTimer_Update()
@@ -53,6 +62,30 @@ public class Enemy_SpawiningManager : MonoBehaviour
     {
         _timeTillNextWave = timeBetweenWaves;
         _isTimerActive = true;
+    }
+
+    private void EndTimer_Update()
+    {
+        if (!_isEndTimerActive) return;
+
+        _timeTillEnd -= Time.deltaTime;
+        EndTimer_CheckEnd();
+    }
+
+    private void EndTimer_CheckEnd()
+    {
+        if (_timeTillEnd > 0f) return;
+
+        // Timer Finished
+        _timeTillEnd = 0;
+        _isEndTimerActive = false;
+        _WinEnd?.Invoke();
+    }
+
+    private void EndTimer_Reset()
+    {
+        _timeTillEnd = timeEnd;
+        _isEndTimerActive = true;
     }
 
 
