@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: b027102678b9e504ca110936f06ab993
   - enabled: 1
     path: Assets/Master/Scenes/Play.unity
-    guid: 733f9414833478945b1262cb25837056
+    guid: 02dd38bdd4ea23046baaf9a01bfd59f8
   - enabled: 1
     path: Assets/Master/Scenes/WinLose.unity
     guid: 06cfe1accd2dda346833683f5b2f3fc7

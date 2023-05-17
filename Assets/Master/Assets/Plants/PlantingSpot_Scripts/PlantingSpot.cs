@@ -46,14 +46,20 @@ public class PlantingSpot : MonoBehaviour
         }
 
     }
-    public void fn_TryPlantPlant()
+    public void fn_TryPlantPlant(out bool isPlantPlanted)
     {
         if (_isPlanted == false)
         {
             _isPlanted = true;
             Instantiate(_PlantPrefab, this.transform.position, Quaternion.identity);
             Debug.Log("A plant is now planted");
+            isPlantPlanted = true;
         }
+        else
+        {
+            isPlantPlanted = false;
+        }
+        
     }
     #endregion
 

@@ -34,9 +34,10 @@ public class PlantingSpot_Interaction : MonoBehaviour
 
         if (seedDisplay != null)
             seedDisplay.SetText("Seed Amount: " + currentseed);
-        Handle_PlayerInput();
-        
+        Handle_PlayerInput();        
     }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlantingSpot")
@@ -69,7 +70,7 @@ public class PlantingSpot_Interaction : MonoBehaviour
             if (currentseed > 0)
             {
                 TryPlantPlant();
-                currentseed--;
+                
             }        
         }
     }
@@ -78,7 +79,9 @@ public class PlantingSpot_Interaction : MonoBehaviour
     {
         if (_isInteractingWithASpot == false) return;
         if (_currentPlantingSpot == null) return;
-        _currentPlantingSpot.GetComponent<PlantingSpot>().fn_TryPlantPlant();
+        _currentPlantingSpot.GetComponent<PlantingSpot>().fn_TryPlantPlant(out bool isPlantPlanted);
+        if (isPlantPlanted)
+            currentseed--;
     }
 
     public void fn_SetSeedsToMax()
