@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Plant_Health : MonoBehaviour, ITargetable, IAttackable
 {
+    public UnityEvent _OnPlantTakeDamage;
+    public UnityEvent _OnPlantDeath;
+
 
     public float _maxHealth = 100;
     public float _currentHealth;
@@ -20,6 +24,8 @@ public class Plant_Health : MonoBehaviour, ITargetable, IAttackable
             return;
 
         _currentHealth -= damageBaseValue;
+        _OnPlantTakeDamage?.Invoke();
+
         if (_currentHealth <= 0)
         {
             Die();
@@ -42,6 +48,7 @@ public class Plant_Health : MonoBehaviour, ITargetable, IAttackable
 
     void Die()
     {
+        _OnPlantDeath?.Invoke();
         Destroy(transform.gameObject);
     }
 }

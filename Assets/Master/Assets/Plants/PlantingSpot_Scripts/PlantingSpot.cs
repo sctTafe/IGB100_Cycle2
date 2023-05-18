@@ -51,7 +51,8 @@ public class PlantingSpot : MonoBehaviour
         if (_isPlanted == false)
         {
             _isPlanted = true;
-            Instantiate(_PlantPrefab, this.transform.position, Quaternion.identity);
+            GameObject go = Instantiate(_PlantPrefab, this.transform.position, Quaternion.identity);
+            go.GetComponent<Plant_Mng>().fn_SetPlantingSpot(this);
             Debug.Log("A plant is now planted");
             isPlantPlanted = true;
         }
@@ -61,6 +62,8 @@ public class PlantingSpot : MonoBehaviour
         }
         
     }
+
+    public void fn_SetIsPlanted(bool isPlanted) => _isPlanted = isPlanted;
     #endregion
 
     #region Private Functions

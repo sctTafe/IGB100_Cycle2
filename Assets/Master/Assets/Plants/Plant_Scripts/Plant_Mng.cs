@@ -13,7 +13,7 @@ public class Plant_Mng : MonoBehaviour
     private float _currentGrowth_pct = 0f;
     private bool _isFinishedGrowing = false;
     private bool _isInNeedOfWater = false;
-
+    private PlantingSpot _plantingSpotWhereThisPlantIs;
 
 
     #region Unity Functions
@@ -89,4 +89,12 @@ public class Plant_Mng : MonoBehaviour
         }
     }
     #endregion
+
+
+    public void fn_SetPlantingSpot(PlantingSpot parentPlantingSpot) => _plantingSpotWhereThisPlantIs = parentPlantingSpot;
+
+    public void fn_ClearPlantingSpotOnDeath()
+    {
+        _plantingSpotWhereThisPlantIs.fn_SetIsPlanted(false);
+    }
 }

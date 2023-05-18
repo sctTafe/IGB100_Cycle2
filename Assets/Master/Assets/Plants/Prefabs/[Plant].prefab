@@ -523,6 +523,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec418b8680126a742b4db25d1464a9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _OnPlantTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnPlantDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2319672148300579064}
+        m_TargetAssemblyTypeName: Plant_Mng, Assembly-CSharp
+        m_MethodName: fn_ClearPlantingSpotOnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _maxHealth: 100
   _currentHealth: 0
 --- !u!54 &4167259184847379046
