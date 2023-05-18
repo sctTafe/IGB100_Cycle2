@@ -33,7 +33,8 @@ public class PlantingSpot_Interaction : MonoBehaviour
         }
 
         if (seedDisplay != null)
-            seedDisplay.SetText("Seed Amount: " + currentseed);
+            seedDisplay.SetText("" + currentseed);
+
         Handle_PlayerInput();        
     }
 

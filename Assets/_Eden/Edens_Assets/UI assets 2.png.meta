@@ -103,18 +103,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SeedImg
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1477
+        width: 361
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99089fa21db171844af95e4853c60030
+      internalID: -600370795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI assets 2_1
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1285
+        width: 606
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47caac73b2ddb794ea76c1a11bc05b13
+      internalID: -755153672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI assets 2_2
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1285
+        width: 606
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f18311760825c243aaee6690ecf0188
+      internalID: -731382668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonImg
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 110
+        width: 1792
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 525, y: 293, z: 560, w: 290}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acec9f8ec353e04d9d75704e4a6ba56
+      internalID: -833460696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a55714a4a5a26a9449e0f5ed5a57d619
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI assets 2_1: -755153672
+      UI assets 2_2: -731382668
+      SeedImg: -600370795
+      ButtonImg: -833460696
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
