@@ -5261,7 +5261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cfbf8be80f0d64eba4263e25758f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetingRange: 10
+  _targetingRange: 25
 --- !u!114 &1615472761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5290,7 +5290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746b76573e9796043b13b62b3065e6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackRange: 5
+  _attackRange: 10
   _attackRate: 1
   _attackDamage: 5
 --- !u!114 &3077678727489148147

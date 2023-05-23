@@ -10,7 +10,8 @@ public class DestroyParent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlantingSpot_Interaction.GetComponent<PlantingSpot_Interaction>().seedcount = 351;
+            PlantingSpot_Interaction[] interaction = other.GetComponentsInChildren<PlantingSpot_Interaction>();
+            interaction[0].fn_addSeed(1);
             Destroy(transform.parent.gameObject);
         }
     }

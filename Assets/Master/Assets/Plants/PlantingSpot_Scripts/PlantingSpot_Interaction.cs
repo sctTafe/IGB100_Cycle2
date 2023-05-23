@@ -26,12 +26,6 @@ public class PlantingSpot_Interaction : MonoBehaviour
 
     private void Update()
     {
-        if (seedcount == 351)
-        {
-            currentseed++;
-            seedcount = 0;
-        }
-
         if (seedDisplay != null)
             seedDisplay.SetText("" + currentseed);
 
@@ -88,5 +82,10 @@ public class PlantingSpot_Interaction : MonoBehaviour
     public void fn_SetSeedsToMax()
     {
         currentseed = 999;
+    }
+
+    public void fn_addSeed(int value)
+    {
+        currentseed += value;
     }
 }
