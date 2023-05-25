@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ProjectileGun : MonoBehaviour
 {
+    public UnityEvent _OnShooting;
     //bullet 
     public GameObject bullet;
 
@@ -144,6 +146,9 @@ public class ProjectileGun : MonoBehaviour
         //if more than one bulletsPerTap make sure to repeat shoot function
         if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);
+
+        // Invoke Events Related to Shooting - Added by SJB
+        _OnShooting?.Invoke();
     }
     private void ResetShot()
     {
