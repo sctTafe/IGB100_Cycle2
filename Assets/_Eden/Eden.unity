@@ -423,5 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dust Fly
       objectReference: {fileID: 0}
+    - target: {fileID: 8860960331770051348, guid: b2d97b1a7cadc9344a4811b52f72fc2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d97b1a7cadc9344a4811b52f72fc2d, type: 3}
