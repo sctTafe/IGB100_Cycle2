@@ -30,6 +30,9 @@ public class GameProgressionMng : MonoBehaviour
 
     [Header("Trigger State")]
     public bool _trigger_WaterRefilled;
+    public bool _trigger_Wait30A;
+    public bool _trigger_Wait30B;
+
 
 
     [Header("Progression State")]
@@ -87,21 +90,27 @@ public class GameProgressionMng : MonoBehaviour
             _isTrack5Started = true;
             StartCoroutine(CallEventAfterDelay5(_track5Time));
             _OnPlayFithAudioClip?.Invoke();
+            
         }
         if (_plantsPlantedCount >= 15 && _isTrack5Fin == true && _isTrack6Started == false)
         {
             _isTrack6Started = true;
             StartCoroutine(CallEventAfterDelay6(_track6Time));
             _OnProgressTrigger6?.Invoke();
+            StartCoroutine(CallWaith30_A());
         }
-        if (_plantsPlantedCount >= 30 && _isTrack6Fin == true && _isTrack7Started == false)
+
+
+        if (_plantsPlantedCount >= 30 && _isTrack6Fin == true && _isTrack7Started == false && _trigger_Wait30A == true)
         {
             _isTrack7Started = true;
             StartCoroutine(CallEventAfterDelay7(_track7Time));
             _OnProgressTrigger7?.Invoke();
+            StartCoroutine(CallWaith30_B());
         }
 
-        if (_isTrack7Fin == true && _isTrack8Started == false)
+
+        if (_isTrack7Fin == true && _isTrack8Started == false && _trigger_Wait30B == true)
         {
             _isTrack8Started = true;
             _OnProgressTrigger8?.Invoke();
@@ -148,6 +157,17 @@ public class GameProgressionMng : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
         _isTrack8Fin = true;
+    }
+
+    private IEnumerator CallWaith30_A()
+    {
+        yield return new WaitForSeconds(30f);
+        _trigger_Wait30A = true;
+    }
+    private IEnumerator CallWaith30_B()
+    {
+        yield return new WaitForSeconds(30f);
+        _trigger_Wait30B = true;
     }
 
     public void fn_Trigger_WaterRefilled()
