@@ -4253,9 +4253,9 @@ Transform:
   - {fileID: 498423854}
   - {fileID: 354457895}
   - {fileID: 369278520}
-  - {fileID: 1300674236}
   - {fileID: 642172380}
   - {fileID: 1044884694}
+  - {fileID: 1300674236}
   - {fileID: 497602275}
   - {fileID: 675839093}
   - {fileID: 1071972274}
@@ -22688,7 +22688,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: WinLose
+          m_StringArgument: Win
           m_BoolArgument: 0
         m_CallState: 2
   plantsGrownDisplay: {fileID: 1748410327}
@@ -30945,7 +30945,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998888921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
