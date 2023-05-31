@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -545,9 +545,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: The golem has died, the heart was destroyed. The golem needs to survive.
+    They will regain their strength and try once more
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: acc5cf8af8a664e48a3fc52138440d7d, type: 2}
   m_sharedMaterial: {fileID: 7701610831818577308, guid: acc5cf8af8a664e48a3fc52138440d7d,
@@ -2492,7 +2491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -195.5}
+  m_AnchoredPosition: {x: 751, y: -31}
   m_SizeDelta: {x: 359.1629, y: 346.4762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7779030666753605716
@@ -4723,7 +4722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -377.26788}
+  m_AnchoredPosition: {x: -747, y: -558}
   m_SizeDelta: {x: 512.9474, y: -913.3706}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7779030667388706203

@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Master/Scenes/Win.unity
     guid: 9cf88ca815c1dad42b24c9675265dadd
+  - enabled: 1
+    path: Assets/Master/Scenes/HowToPlay1.unity
+    guid: 6b42b73201a097f4f9c38aedd9ae6668
+  - enabled: 1
+    path: Assets/Master/Scenes/HowToPlay2.unity
+    guid: 2e01c7cf84773c840b167b72d152a7a1
   m_configObjects: {}
