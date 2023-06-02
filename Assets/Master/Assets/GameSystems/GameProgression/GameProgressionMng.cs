@@ -166,7 +166,7 @@ public class GameProgressionMng : MonoBehaviour
     }
     private IEnumerator CallWaith30_B()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(60f);
         _trigger_Wait30B = true;
     }
 
